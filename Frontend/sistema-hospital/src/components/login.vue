@@ -20,6 +20,7 @@
         <footer>
           <a class="text-indigo-700 hover:text-pink-700 text-sm float-left" href="#">¿Olvidaste tu contraseña?</a>
           <router-link class="text-indigo-700 hover:text-pink-700 text-sm float-right" to="/register">Crear cuenta</router-link>
+          <router-link class="text-indigo-700 hover:text-pink-700 text-sm float-right" to="/dashboard">Iniciar</router-link>
         </footer>   
       </div>
     </div>
