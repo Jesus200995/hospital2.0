@@ -2,11 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import RegisterUser from '@/components/registerUser.vue'
 import LoginView from '@/components/login.vue'
 import Dashboard from '@/components/dashboard.vue'
+import Usuario from '@/components/usuario.vue'
+import Personas from '@/components/personas.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-
     {
       path: '/',
       name: 'login',
@@ -20,8 +22,22 @@ const router = createRouter({
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: Dashboard
+      component: Dashboard,
+      children:[{path:'/personas', name:'personas',component:Personas}]
+      
     },
+    {
+      path: '/usuario',
+      name: 'Usuario',
+      component: Usuario
+    },
+    {
+      path: '/personas',
+      name: 'Personas',
+      component: Personas
+    },
+    
+    
   ]
 })
 
